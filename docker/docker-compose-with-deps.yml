@@ -17,14 +17,14 @@ services:
       - DOMAIN_NAME=localhost
       - ALLOWED_HOSTS=*
       - TEMBA_HOST=localhost
-      - DJANGO_DEBUG="off"
+      - DJANGO_DEBUG=off
       - DATABASE_URL=postgresql://postgres:postgres@postgresql/rapidpro
       - REDIS_URL=redis://redis:6379/0
       - SECRET_KEY={$RAPIDPRO_SECRET_KEY:-super-secret-key}
-      - MANAGEPY_COLLECTSTATIC="on"
-      - MANAGEPY_COMPRESS="on"
-      - MANAGEPY_INIT_DB="on"
-      - MANAGEPY_MIGRATE="on"
+      - MANAGEPY_COLLECTSTATIC=off
+      - MANAGEPY_COMPRESS=off
+      - MANAGEPY_INIT_DB=off
+      - MANAGEPY_MIGRATE=off
     depends_on:
       - redis
       - postgresql
